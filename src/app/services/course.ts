@@ -14,7 +14,7 @@ export interface Course {
 })
 
 export class CourseService {
-  private apiURL = 'https://webbutveckling.miun.se/files/ramschema.json';
+  private apiURL = '/ramschema.json';
 
   constructor(private http: HttpClient) {}
 

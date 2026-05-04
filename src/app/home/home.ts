@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Course, CourseService } from '../services/course';
 
 @Component({
   selector: 'app-home',
@@ -6,12 +7,14 @@ import { Component } from '@angular/core';
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home {}
+export class Home implements OnInit {
+  courses: Course[] = [];
 
-export interface Course {
-  coursename: string;
-  code: string;
-  progression: string;
-  syllabus: string;
+  constructor(private courseService: CourseService) {}
+
+  ngOnInit(): void {
+    this.courseService.getCourses().subscribe((data) => {
+      this.courses = data;
+    });
+  }
 }
-

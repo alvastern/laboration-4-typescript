@@ -1,10 +1,28 @@
 <h1>Webbutveckling - Ramschema</h1>
 
 <section>
-    <p>Sök:</p>
-    <input type="text" placeholder="Sök..." id="input">
+  <p>Sök:</p>
+  <input type="text" placeholder="Sök..." id="input">
 </section>
 
 <section>
-    <table></table>
+  <table>
+    <thead>
+      <tr>
+        <th>Kurskod</th>
+        <th>Kursnamn</th>
+        <th>Progression</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (course of courses; track course.code) {
+        <tr>
+          <td>{{ course.code }}</td>
+          <td>{{ course.coursename }}</td>
+          <td>{{ course.progression }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
 </section>
