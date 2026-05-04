@@ -7,3 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './home.scss',
 })
 export class Home {}
+
+export interface Course {
+  name: string;
+  code: string;
+  progression: string;
+  syllabus: string;
+}
+
