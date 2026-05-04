@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class Home {}
 
 export interface Course {
-  name: string;
+  coursename: string;
   code: string;
   progression: string;
   syllabus: string;
