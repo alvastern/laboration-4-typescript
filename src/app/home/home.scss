@@ -1,4 +1,18 @@
+#search-section {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    margin: 5vh 0 5vh 5vw;
+}
+
 table {
-    width: 90%;
-    height: auto;
+    width: 60vw;
+    margin: 0 0 5vh 5vw;
+    border-collapse: collapse;
+}
+
+th, td {
+    border-bottom: 1px solid black;
+    padding: 1vh;
+    text-align: left;
 }

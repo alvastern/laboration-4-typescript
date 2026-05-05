@@ -1,22 +1,22 @@
 <h1>Webbutveckling - Ramschema</h1>
 
-<section>
-  <p>Sök:</p>
-  <input type="text" placeholder="Sök..." id="input">
+<section id="search-section">
+  <p><b>Sök:</b></p>
+  <input type="text" placeholder="Sök..." [(ngModel)]="searchTerm" (input)="filterCourses()"/>
 </section>
 
 <section>
   <table>
     <thead>
       <tr>
-        <th>Kurskod</th>
-        <th>Kursnamn</th>
-        <th>Progression</th>
+        <th (click)="sortCourses('code')">Kurskod</th>
+        <th (click)="sortCourses('coursename')">Kursnamn</th>
+        <th (click)="sortCourses('progression')">Progression</th>
       </tr>
     </thead>
 
     <tbody>
-      <tr *ngFor="let course of courses">
+      <tr *ngFor="let course of filteredCourses">
         <td>{{ course.code }}</td>
         <td>{{ course.coursename }}</td>
         <td>{{ course.progression }}</td>
