@@ -11,8 +11,21 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+th {
     border-bottom: 1px solid black;
     padding: 1vh;
     text-align: left;
+    cursor: pointer;
+}
+
+td {
+    border-bottom: 1px solid black;
+    padding: 1vh;
+    text-align: left; 
+}
+
+#paragraf {
+    margin: 0 0 5vh 5vw;
+    font-size: 1.2em;
+    font-weight: 600;
 }
